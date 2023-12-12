@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Click Event</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: 'Arial', sans-serif;
+            padding: 20px;
+        }
+
+        #output {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Click the button below!</h1>
+    <button id="clickButton">Click me</button>
+    <p id="output">Button not clicked yet.</p>
+
+    <script>
+        // Get the button and output element
+const clickButton = document.getElementById('clickButton');
+const outputElement = document.getElementById('output');
+
+// Function to handle click event
+function handleClick() {
+    // Update the output when the button is clicked
+    outputElement.textContent = 'Button clicked!';
+}
+
+// Event listener for click
+clickButton.addEventListener('click', handleClick);
+
+    </script>
+</body>
+</html>

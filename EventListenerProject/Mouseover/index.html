@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mouse Over Event</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: 'Arial', sans-serif;
+            padding: 20px;
+        }
+
+        #targetElement {
+            padding: 20px;
+            border: 1px solid #ccc;
+            margin: 20px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>Move your mouse over the box below!</h1>
+    <p id="targetElement">Mouse over me!</p>
+
+    <script>
+        // Get the target element
+const targetElement = document.getElementById('targetElement');
+
+// Function to handle mouse over event
+function handleMouseOver() {
+    // Change the text when the mouse moves over the element
+    targetElement.textContent = 'Mouse over me! You did it!';
+}
+
+// Event listener for mouse over
+targetElement.addEventListener('mouseover', handleMouseOver);
+
+    </script>
+</body>
+</html>

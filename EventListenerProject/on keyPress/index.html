@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KeyPress Event</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: 'Arial', sans-serif;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Type something using your keyboard!</h1>
+    <p id="output">Key pressed: </p>
+
+    <script>
+        // Get the output element
+const outputElement = document.getElementById('output');
+
+// Function to handle key press event
+function handleKeyPress(event) {
+    // Update the output with the pressed key
+    outputElement.textContent = `Key pressed: ${event.key}`;
+}
+
+// Event listener for key press
+document.addEventListener('keypress', handleKeyPress);
+
+    </script>
+</body>
+</html>

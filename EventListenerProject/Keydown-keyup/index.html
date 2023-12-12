@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Key Press Event</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: 'Arial', sans-serif;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Press a key to change the background color!</h1>
+
+    
+<script>
+
+        // Get the body element
+const body = document.body;
+
+// Function to change the background color randomly
+function changeColor() {
+    // Generate random RGB values
+    const randomColor = `rgb(${Math.floor(Math.random() * 256)}, ${Math.floor(Math.random() * 256)}, ${Math.floor(Math.random() * 256)})`;
+
+    // Apply the random color to the body background
+    body.style.backgroundColor = randomColor;
+}
+
+// Event listener for key press
+document.addEventListener('keypress', (event) => {
+    // Log the key code to the console
+    console.log(`Key pressed: ${event.key}`);
+    
+    // Change the background color on key press
+    changeColor();
+});
+
+// Event listener for key down
+document.addEventListener('keydown', (event) => {
+    // Log the key code to the console
+    console.log(`Key down: ${event.key}`);
+    
+    // Change the background color on key down
+    changeColor();
+});
+
+    </script>
+</body>
+
+</html>
